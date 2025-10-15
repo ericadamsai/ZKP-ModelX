@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT"></a>
+  <a href="https://github.com/ericadamsai/ZKP-ModelX/actions/workflows/ci.yml"><img src="https://github.com/ericadamsai/ZKP-ModelX/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/python-3.11-blue.svg" alt="Python 3.11">
   <img src="https://img.shields.io/badge/deps-0-brightgreen.svg" alt="Zero dependencies">
   <img src="https://img.shields.io/badge/tests-pytest-6C9EEB.svg" alt="Tests: pytest">
