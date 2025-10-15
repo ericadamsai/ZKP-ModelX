@@ -5,9 +5,14 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT"></a>
   <a href="https://github.com/ericadamsai/ZKP-ModelX/actions/workflows/ci.yml"><img src="https://github.com/ericadamsai/ZKP-ModelX/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://codecov.io/gh/ericadamsai/ZKP-ModelX"><img src="https://codecov.io/gh/ericadamsai/ZKP-ModelX/branch/main/graph/badge.svg" alt="coverage"></a>
   <img src="https://img.shields.io/badge/python-3.11-blue.svg" alt="Python 3.11">
   <img src="https://img.shields.io/badge/deps-0-brightgreen.svg" alt="Zero dependencies">
   <img src="https://img.shields.io/badge/tests-pytest-6C9EEB.svg" alt="Tests: pytest">
+  <img src="https://img.shields.io/badge/style-black-000000.svg" alt="Code style: black">
+  <img src="https://img.shields.io/badge/lint-ruff-46A2F1.svg" alt="Lint: ruff">
+  <img src="https://img.shields.io/badge/type-mypy-2A6DB1.svg" alt="Type: mypy">
+  <img src="https://img.shields.io/badge/hooks-pre--commit-FAB040.svg" alt="pre-commit">
 </p>
 
 # ZKP-ModelX: AXIOMHIVE_ZKVS_SIEVE_PROTOCOL
@@ -68,7 +73,22 @@ flowchart TB
   5) Enforcement checks, ZK stamp, trust metrics, moat, complexity pass.
   6) Final multi‑line attested report.
 
+## Contributor setup
+- Install dev tools:
+```bash path=null start=null
+pip install -r requirements-dev.txt
+pre-commit install
+```
+- Run linters/formatters/type checks:
+```bash path=null start=null
+ruff check .
+black --check .
+isort --check-only .
+mypy --config-file mypy.ini
+```
+
 ## Testing
+Coverage report is uploaded to Codecov on CI and shown via badge above.
 - Install tests dependency:
 ```bash path=null start=null
 pip install pytest
